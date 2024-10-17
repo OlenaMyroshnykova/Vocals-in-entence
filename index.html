@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programa que pida una frase y escriba las vocales que aparecen</title>
+    <title>Búsqueda de vocales</title>
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <h1>Programa que pida una frase y escriba las vocales que aparecen</h1>
+    <h1>Búsqueda de vocales en una frase</h1>
     <p id="pId1">la</p>
     <p id="pId2">lo</p>
     <p id="pId3">la le li lo lu</p>
     <p id="pId4">['i','i']</p>
     <p id="pId5">la le li lo lu pa pe pi po pu</p>
     <p id="pId6">Hello World!</p>
-    <input id="inputId" type="text">
-    <button id="buttonId">Run</button>
+    <form id="vowelForm"></form>
+        <label for="inputId" >Introduce una frase:</label>
+        <input id="inputId" type="text" placeholder="Escribe la frase aquí">
+        <button id="buttonId" type="submit">Buscar vocales</button>
+    </form>
+    <p>Resultado: <span id="result"></span></p>
 </body>
 </html>
