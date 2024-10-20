@@ -9,8 +9,20 @@ function searchVocals(sentence) {
 }
 
 function deleteDuplicity(list) {
-    return [...new Set(list)];
-}
+    const vocals = ['a', 'e', 'i', 'o', 'u'];
+    let foundVocals = [];
+
+    for (let item of list) {
+        let strItem = String(item).toLowerCase();
+
+        for (let char of strItem) {
+            if (vocals.includes(char) && !foundVocals.includes(char)) {
+                foundVocals.push(char); 
+            }
+        }
+    }
+    return `['${foundVocals.join("', '")}']`;
+ }
 
 function getVocals(sentence) {
     const vocalsList = searchVocals(sentence);
@@ -29,11 +41,46 @@ document.getElementById('vowelForm').addEventListener('submit', function(event) 
 
 function setInputValueFromParagraph(paragraphId) {
     const paragraph = document.getElementById(paragraphId);
-    const input = document.getElementById('inputId');
+    const input = document.getElementById('inputValue');
     if (paragraph && input) {
         input.value = paragraph.textContent;
     }
 }
+
+document.getElementById('executeButton').addEventListener('click', function() {
+    const selectedFunction = document.getElementById('functionSelect').value;
+    const inputValue = document.getElementById('inputValue').value;
+    let result;
+
+    switch (selectedFunction) {
+        case 'getSentence':
+            result = getSentence(inputValue);
+            break;
+        case 'searchVocals':
+            result = searchVocals(inputValue);
+            break;
+        case 'deleteDuplicity':
+            result = deleteDuplicity(inputValue.split(','));
+            break;
+        case 'getVocals':
+            result = getVocals(inputValue);
+            break;
+        default:
+            result = 'Función no encontrada';
+    }
+
+    document.getElementById('result').textContent = Array.isArray(result) ? result.join(', ') : result;
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Вызов каждой функции и вставка результатов в соответствующие элементы
+    document.getElementById('result1').textContent = `'${getSentence('la')}'`;
+    document.getElementById('result2').textContent = JSON.stringify(searchVocals('lo'));
+    document.getElementById('result3').textContent = JSON.stringify(searchVocals('la le li lo lu'));
+    document.getElementById('result4').textContent = JSON.stringify(deleteDuplicity(['i', 'i']));
+    document.getElementById('result5').textContent = JSON.stringify(searchVocals('la le li lo lu pa pe pi po pu'));
+    document.getElementById('result6').textContent = `'${getVocals('Hello World!')}'`;
+});
 
 document.getElementById('pId1').addEventListener('click', function() {
     setInputValueFromParagraph('pId1');

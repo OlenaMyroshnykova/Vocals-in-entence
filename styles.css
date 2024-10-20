@@ -1,10 +1,44 @@
 body {
+    font-family: 'Poppins', sans-serif;
     background-image: url('images/background.webp');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed;
     background-position: center;
 }
+
+header {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+    padding: 1px;
+    width: 99.9vw;
+}
+
+h1{
+    color:white;
+    text-decoration: none;
+    font-size: 2vw;
+}
+p{
+    text-align:center;
+    text-decoration: solid;
+}
+
+main {
+    margin-top: 30px;
+    text-align:center;
+    width: auto;
+    height: auto;
+}
+
+.content {
+    
+    width: 99.9vw;
+    height: 38vw;
+}
+
 .clickable {
     color: blue;
     text-decoration: underline;
@@ -15,4 +49,32 @@ body {
 
 .clickable:hover {
     color: darkblue;
+}
+
+footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    font-size: 1vw;
+    margin-bottom: 0px;
+    padding: 1px;
+    width: 99.9vw;
+}
+
+@media (max-width: 1080px) {
+  .content {
+    width: calc(25% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: calc(50% - 20px);
+    }
+}
+  
+@media (max-width: 480px) {
+  .content {
+    width: calc(100% - 20px);
+  }
 }

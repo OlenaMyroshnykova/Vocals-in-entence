@@ -8,27 +8,41 @@
 </head>
 <body>
     <header>
-        <h1>Búsqueda de vocales en una frase</h1>
+        <h1>Vocales en una frase</h1>
     </header>
 
-    <main>
-        <p class="clickable" id="pId1">la</p>
-        <p class="clickable" id="pId2">lo</p>
-        <p class="clickable" id="pId3">la le li lo lu</p>
-        <p class="clickable" id="pId4">['i','i']</p>
-        <p class="clickable" id="pId5">la le li lo lu pa pe pi po pu</p>
-        <p class="clickable" id="pId6">Hello World!</p>
-        <form id="vowelForm"></form>
-            <label for="inputId" >Introduce una frase:</label>
-            <input id="inputId" type="text" placeholder="Escribe la frase aquí">
-            <button id="buttonId" type="submit">Buscar vocales</button>
-        </form>
-        <p>Resultado: <span id="result"></span></p>
-        </main>
+    <main class="content">
+        <div>
+            <h2>Ejemplos de Funciones con Resultados</h2>
 
-        <footer>
-            
-        </footer>
+            <p class="clickable" id="pId1">la                               (getSentence return -> <span id="result1"></span>)</p>
+            <p class="clickable" id="pId2">lo                               (searchVocals return -> <span id="result2"></span>)</p>
+            <p class="clickable" id="pId3">la le li lo lu                   (searchVocals return -> <span id="result3"></span>)</p>
+            <p class="clickable" id="pId4">['i','i']                        (deleteDuplicity return -> <span id="result4"></span>)</p>
+            <p class="clickable" id="pId5">la le li lo lu pa pe pi po pu    (searchVocals return -> <span id="result5"></span>)</p>
+            <p class="clickable" id="pId6">Hello World!                     (getVocals return -> <span id="result6"></span>)</p> 
+            <p></p>
+            <form id="vowelForm"></form>
+            <label for="functionSelect">Elige una función:</label>
+            <select id="functionSelect">
+                <option value="getSentence">getSentence</option>
+                <option value="searchVocals">searchVocals</option>
+                <option value="deleteDuplicity">deleteDuplicity</option>
+                <option value="getVocals">getVocals</option>
+            </select>
+        
+            <label for="inputValue">Introduce el valor:</label>
+            <input type="text" id="inputValue" placeholder="Escribe aquí...">
+        
+            <button id="executeButton">Ejecutar</button>
+        
+            <p>Resultado: <span id="result"></span></p>        </form>
+        </div>
+    </main>
+
+    <footer>
+        <h1>El canto es la habilidad de alargar las vocales</h1>
+    </footer>
     <script src="index.js" defer></script>
 </body>
 </html>
