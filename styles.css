@@ -29,54 +29,54 @@ main {
     height: auto;
 }
 
-        /* Центрируем таблицу */
-        .content {
-            display: flex;
-            justify-content: center;
-        }
+.content {
+    display: flex;
+    justify-content: center;
+}
 
-        table {
-            border-collapse: collapse;
-            width: 70%;
-            margin: 20px auto;
-            text-align: left;
-        }
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 20px auto;
+    text-align: left;
+}
 
-        th, td {
-            border: 2px solid  #282c34;
-            padding: 12px;
-            text-align: center;
-        }
+th, td {
+    border: 2px solid  #282c34;
+    padding: 12px;
+    text-align: center;
+}
 
-        th {
-            background-color: #282c34;
-            color: white;
-        }
+th {
+    background-color: #282c34;
+    color: white;
+}
 
-        td input {
-            width: 100%;
-            padding: 5px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
+td input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
 
-        td button {
-            padding: 8px 16px;
-            background-color: #282c34;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+td button {
+    padding: 8px 16px;
+    background-color: #282c34;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-        td button:hover {
-            background-color: #45a049;
-        }
+td button:hover {
+    background-color: white;
+    color: #282c34;
+}
 
-        td span {
-            font-weight: bold;
-        }
-
+td span {
+    font-weight: bold;
+    font-size: 38px;
+}
 
 footer {
     background-color: #282c34;
