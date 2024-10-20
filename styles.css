@@ -25,9 +25,10 @@ h1{
 main {
     margin-top: 30px;
     text-align:center;
-    width: auto;
-    height: auto;
+    width: 99.9vw;
+    height: 80vh;
 }
+
 
 .content {
     display: flex;
@@ -50,6 +51,14 @@ th, td {
 th {
     background-color: #282c34;
     color: white;
+}
+
+th:nth-child(1), td:nth-child(1) {
+    width: 30vw; 
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 30vw; 
 }
 
 td input {

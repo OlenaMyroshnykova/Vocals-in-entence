@@ -127,12 +127,13 @@ function deleteDuplicity(list) {
 
         for (let char of strItem) {
             if (vocals.includes(char) && !foundVocals.includes(char)) {
-                foundVocals.push(char); 
+                foundVocals.push(char);
             }
         }
     }
+
     return `['${foundVocals.join("', '")}']`;
- }
+}
 
 function getVocals(sentence) {
     let foundVocals = searchVocals(sentence);
@@ -153,7 +154,7 @@ function runFunction(funcName, inputId, resultId) {
             result = searchVocals(inputValue);
             break;
         case 'deleteDuplicity':
-            result = deleteDuplicity(JSON.parse(inputValue));
+            result = deleteDuplicity(inputValue);
             break;
         case 'getVocals':
             result = getVocals(inputValue);
