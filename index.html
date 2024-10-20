@@ -14,70 +14,55 @@
     <main class="content">
         <div>
             <h2>Ejemplos de Funciones con Resultados</h2>
+
             <table>
                 <thead>
                     <tr>
-                        <th>Ejemplo</th>
+                        <th>Introduce el valor</th>
                         <th>Función</th>
                         <th>Resultado</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="clickable" id="pId1">la</td>
-                        <td>getSentence</td>
+                        <td><input type="text" id="input1" value="la"></td>
+                        <td><button onclick="runFunction('getSentence', 'input1', 'result1')">getSentence</button></td>
                         <td><span id="result1"></span></td>
                     </tr>
                     <tr>
-                        <td class="clickable" id="pId2">lo</td>
-                        <td>searchVocals</td>
+                        <td><input type="text" id="input2" value="lo"></td>
+                        <td><button onclick="runFunction('searchVocals', 'input2', 'result2')">searchVocals</button></td>
                         <td><span id="result2"></span></td>
                     </tr>
                     <tr>
-                        <td class="clickable" id="pId3">la le li lo lu</td>
-                        <td>searchVocals</td>
+                        <td><input type="text" id="input3" value="la le li lo lu"></td>
+                        <td><button onclick="runFunction('searchVocals', 'input3', 'result3')">searchVocals</button></td>
                         <td><span id="result3"></span></td>
                     </tr>
                     <tr>
-                        <td class="clickable" id="pId4">['i','i']</td>
-                        <td>deleteDuplicity</td>
+                        <td><input type="text" id="input4" value="['i','i']"></td>
+                        <td><button onclick="runFunction('deleteDuplicity', 'input4', 'result4')">deleteDuplicity</button></td>
                         <td><span id="result4"></span></td>
                     </tr>
                     <tr>
-                        <td class="clickable" id="pId5">la le li lo lu pa pe pi po pu</td>
-                        <td>searchVocals</td>
+                        <td><input type="text" id="input5" value="la le li lo lu pa pe pi po pu"></td>
+                        <td><button onclick="runFunction('searchVocals', 'input5', 'result5')">searchVocals</button></td>
                         <td><span id="result5"></span></td>
                     </tr>
                     <tr>
-                        <td class="clickable" id="pId6">Hello World!</td>
-                        <td>getVocals</td>
+                        <td><input type="text" id="input6" value="Hello World!"></td>
+                        <td><button onclick="runFunction('getVocals', 'input6', 'result6')">getVocals</button></td>
                         <td><span id="result6"></span></td>
                     </tr>
                 </tbody>
             </table>
-
-            <!-- Форма для выбора функции и выполнения -->
-            <form id="vowelForm">
-                <label for="functionSelect">Elige una función:</label>
-                <select id="functionSelect">
-                    <option value="getSentence">getSentence</option>
-                    <option value="searchVocals">searchVocals</option>
-                    <option value="deleteDuplicity">deleteDuplicity</option>
-                    <option value="getVocals">getVocals</option>
-                </select>
-
-                <label for="inputValue">Introduce el valor:</label>
-                <input type="text" id="inputValue" placeholder="Escribe aquí...">
-
-                <button id="executeButton">Ejecutar</button>
-
-                <p>Resultado: <span id="result"></span></p>
-            </form>
-        </div>    </main>
+        </div>
+    </main>
 
     <footer>
         <h1>El canto es la habilidad de alargar las vocales</h1>
     </footer>
+    
     <script src="index.js" defer></script>
 </body>
 </html>

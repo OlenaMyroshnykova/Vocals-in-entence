@@ -21,10 +21,6 @@ h1{
     text-decoration: none;
     font-size: 2vw;
 }
-p{
-    text-align:center;
-    text-decoration: solid;
-}
 
 main {
     margin-top: 30px;
@@ -33,23 +29,54 @@ main {
     height: auto;
 }
 
-.content {
-    
-    width: 99.9vw;
-    height: 38vw;
-}
+        /* Центрируем таблицу */
+        .content {
+            display: flex;
+            justify-content: center;
+        }
 
-.clickable {
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
-    margin: 5px 0;
-    transition: color 0.3s;
-}
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 20px auto;
+            text-align: left;
+        }
 
-.clickable:hover {
-    color: darkblue;
-}
+        th, td {
+            border: 2px solid  #282c34;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #282c34;
+            color: white;
+        }
+
+        td input {
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        td button {
+            padding: 8px 16px;
+            background-color: #282c34;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        td button:hover {
+            background-color: #45a049;
+        }
+
+        td span {
+            font-weight: bold;
+        }
+
 
 footer {
     background-color: #282c34;
