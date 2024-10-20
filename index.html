@@ -4,21 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Búsqueda de vocales</title>
-    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Búsqueda de vocales en una frase</h1>
-    <p id="pId1">la</p>
-    <p id="pId2">lo</p>
-    <p id="pId3">la le li lo lu</p>
-    <p id="pId4">['i','i']</p>
-    <p id="pId5">la le li lo lu pa pe pi po pu</p>
-    <p id="pId6">Hello World!</p>
-    <form id="vowelForm"></form>
-        <label for="inputId" >Introduce una frase:</label>
-        <input id="inputId" type="text" placeholder="Escribe la frase aquí">
-        <button id="buttonId" type="submit">Buscar vocales</button>
-    </form>
-    <p>Resultado: <span id="result"></span></p>
+    <header>
+        <h1>Búsqueda de vocales en una frase</h1>
+    </header>
+
+    <main>
+        <p class="clickable" id="pId1">la</p>
+        <p class="clickable" id="pId2">lo</p>
+        <p class="clickable" id="pId3">la le li lo lu</p>
+        <p class="clickable" id="pId4">['i','i']</p>
+        <p class="clickable" id="pId5">la le li lo lu pa pe pi po pu</p>
+        <p class="clickable" id="pId6">Hello World!</p>
+        <form id="vowelForm"></form>
+            <label for="inputId" >Introduce una frase:</label>
+            <input id="inputId" type="text" placeholder="Escribe la frase aquí">
+            <button id="buttonId" type="submit">Buscar vocales</button>
+        </form>
+        <p>Resultado: <span id="result"></span></p>
+        </main>
+
+        <footer>
+            
+        </footer>
+    <script src="index.js" defer></script>
 </body>
 </html>
